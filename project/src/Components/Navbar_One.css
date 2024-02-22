@@ -1,0 +1,215 @@
+/* 
+    font-family: 'Roboto Mono', monospace;
+*/
+
+
+.NavbarOne_Container
+{
+    width: 100vh;
+    height:auto;
+    display: flex;
+    gap: 8.34rem;
+    padding: 0.61rem 1.9rem;
+}
+
+.left-part
+{
+    display: flex;
+    gap: 1.6rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar_bar
+{
+    font-size: 1.34rem;
+    opacity: 0.81;
+    padding: 0.57rem 0.68rem;
+    background-color: inherit;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.navbar_bar:hover
+{
+    background-color: rgba(128, 128, 128, 0.209);
+}
+
+.youtube_icons
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.youtube_img
+{
+    width: 1.85rem;
+    height: 1.85rem;
+    opacity: 0.96;
+}
+
+.yt_icon_text
+{
+    margin: 0;
+    position: relative;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    font-size: 1.37rem;
+    letter-spacing: -0.1rem;
+    opacity: 0.9;
+    padding-bottom: 0.03rem;
+}
+
+.yt_icon_text :nth-child(1)
+{
+    font-size: 0.63rem;
+    font-weight: 100;
+    position: absolute;
+    top: 0;
+    padding-left: 0.2rem;
+    opacity: 0.7;
+}
+
+.middle-part
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+}
+
+.middle-part form
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar
+{
+    width: 29rem;
+    height: 2.3rem;
+    border-radius: 1.8rem 0 0 1.8rem;
+    border: 0.02rem solid rgba(0, 0, 0, 0.397);
+    padding-left: 1rem;
+}
+
+.search-bar::placeholder
+{
+    font-size: 1.02rem;
+}
+
+.search-bar:focus
+{
+    outline:none;
+    box-shadow: inset 0 0 0.2rem rgba(41, 41, 41, 0.279);
+    box-shadow: 0 0 0.17rem rgba(0, 0, 0, 0.537);
+    border: 0.02rem solid rgb(4, 141, 215);
+}
+.search-bar-button
+{
+    background-color: rgba(138, 138, 138, 0.098);
+    width: 3.7rem;
+    height: 2.49rem;
+    border-radius: 0 1.8rem 1.8rem 0;
+    border: 0.02rem solid rgba(0, 0, 0, 0.397);
+    border-left: none;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.search-bar-button:hover
+{
+    background-color: rgba(138, 138, 138, 0.161);
+}
+
+.search-bar-button :nth-child(1)
+{
+    font-size: 1rem;
+    padding-right: 0.3rem;
+    opacity: 0.8;
+}
+
+.microphone
+{
+    padding: 0.6rem 0.84rem;
+    border-radius: 50%;
+    background-color: rgba(220, 220, 220, 0.426);
+    box-shadow: inset 0 0 0.04rem rgba(0, 0, 0, 0.264);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.microphone:hover
+{
+    background-color: rgba(170, 170, 170, 0.557);
+    opacity: 0.87;
+}
+
+.microphone :nth-child(1)
+{
+    font-size: 1.15rem;
+    padding-top: 0.1rem;
+}
+
+.right-part
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+}
+.upload-container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.155rem;
+    opacity: 0.8;
+    padding: 0.5rem 0.6rem;
+    background-color: inherit;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.upload-container:hover
+{
+    background-color: rgba(199, 199, 199, 0.46);
+}
+
+
+.upload-border-bottom
+{
+    height: 0.061rem;
+    background-color: black;
+    width: 1rem;
+    margin-left: 0.061rem;
+}
+
+.bell-icon
+{
+    width: 1.5rem;
+    opacity: 0.8;
+    padding: 0.5rem;
+    background-color: inherit;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.bell-icon:hover
+{
+    background-color: rgba(199, 199, 199, 0.46);
+}
+
+.user_img
+{
+    width: 2.18rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
