@@ -9,13 +9,19 @@
     height: 89.1vh;
     padding-top: 1rem;
     position: absolute;
+    background-color: white;
+}
+
+.NavbarTwo_Container a
+{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 1);
 }
 
 .navbar-two-icon
 {
-    width: 85%;
     font-size: 1.2rem;
-    padding: 1.3rem 0rem;
+    padding: 1.3rem 1.3rem;
     border-radius: 0.5rem;
     cursor: pointer ;
 }

@@ -10,6 +10,7 @@
     display: flex;
     gap: 9rem;
     padding: 0.61rem 1.9rem 0.61rem 1.1rem;
+    background-color: white;
 }
 
 .left-part

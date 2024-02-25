@@ -1,4 +1,6 @@
+// React
 import React from 'react'
+import { NavLink} from 'react-router-dom';
 
 // CSS
 import './Navbar_Two.css'
@@ -13,11 +15,21 @@ import { faHouse, faMusic, faGamepad, faTrophy, faFire} from '@fortawesome/free-
 function Navbar_Two() {
   return (
     <div className='NavbarTwo_Container'>
-        <FontAwesomeIcon className='navbar-two-icon' icon={faHouse} />
-        <FontAwesomeIcon className='navbar-two-icon' icon={faMusic} />
-        <FontAwesomeIcon className='navbar-two-icon' icon={faGamepad} />
-        <FontAwesomeIcon className='navbar-two-icon' icon={faTrophy} />
-        <FontAwesomeIcon className='navbar-two-icon' icon={faFire} />
+        <NavLink to='/'>
+            <FontAwesomeIcon className='navbar-two-icon' icon={faHouse} />
+        </NavLink>
+        <NavLink to='/music'>
+            <FontAwesomeIcon className='navbar-two-icon' icon={faMusic} />
+        </NavLink>
+        <NavLink to='/game'>
+            <FontAwesomeIcon className='navbar-two-icon' icon={faGamepad} />
+        </NavLink>
+        <NavLink to='/sport'>
+            <FontAwesomeIcon className='navbar-two-icon' icon={faTrophy} />
+        </NavLink>
+        <NavLink to='/trend'>
+            <FontAwesomeIcon className='navbar-two-icon' icon={faFire} />
+        </NavLink>
     </div>
   )
 }
