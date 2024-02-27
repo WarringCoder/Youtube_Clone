@@ -1,42 +1,42 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const API_KEY = "AIzaSyCwyGcywlthiEn5Si0VoBER7rkh6dqyX-s";
-const CHANNEL_ID = "UCixlkmZOHuly9d7l5c7lvWQ";
 
-export const YTvideos = () => {
-  const API_KEY = "AIzaSyCwyGcywlthiEn5Si0VoBER7rkh6dqyX-s";
-  const CHANNEL_ID = "UCixlkmZOHuly9d7l5c7lvWQ";
+const YTServices = () => {
+  const [allvideos, setAllvideos] = useState([]);
 
-  const YTvideos = () => {
-    const [allvideos, setAllvideos] = useState([]);
+  useEffect(() => {
+    const fetchurl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=200&regionCode=TR&key=${API_KEY}`;
 
-    useEffect(() => {
-      const fetchurl = `https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&channelId=${CHANNEL_ID}&part=snippet,id&order=date&maxResults=20`;
+    fetch(fetchurl)
+      .then((response) => response.json())
+      .then(async (resJson) => {
+        if (resJson.items) {
+          const videosWithChannelInfo = await Promise.all(resJson.items.map(async (doc) => {
+            const channelUrl = `https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${doc.snippet.channelId}&key=${API_KEY}`;
+            const channelResponse = await fetch(channelUrl);
+            const channelJson = await channelResponse.json();
 
-      fetch(fetchurl)
-        .then((response) => response.json())
-        .then((resJson) => {
-          if (resJson.items) {
-            const result = resJson.items.map((doc) => ({
+            const channelImage = channelJson.items[0]?.snippet?.thumbnails?.default?.url || '';
+
+            return {
               ...doc,
               Videolink: "https://www.youtube.com/embed/" + doc.id.videoId,
-            }));
-            setAllvideos(result);
-          } else {
-            console.error("No 'items' property in response:", resJson);
-          }
-        })
-        .catch((error) => {
-          console.error("Error fetching YouTube videos:", error);
-        });
-    }, []);
+              ChannelImage: channelImage,
+            };
+          }));
 
-    console.log(allvideos);
-  };
+          setAllvideos(videosWithChannelInfo);
+        } else {
+          console.error("No 'items' property in response:", resJson);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching YouTube videos:", error);
+      });
+  }, []);
 
-  return (
-    <div>
-      {/* Burada videoları görüntüleyebilirsiniz */}
-    </div>
-  );
+  return allvideos;
 };
+
+export default YTServices;
