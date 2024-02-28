@@ -2,9 +2,14 @@
 import './Sport.css';
 import React from 'react'
 
+// pages
+import Home from '../Home/Home';
+
 function Sport() {
   return (
-    <div>Sport</div>
+    <div>
+      <Home></Home>
+    </div>
   )
 }
 

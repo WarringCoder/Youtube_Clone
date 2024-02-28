@@ -16,8 +16,8 @@ import { faCircle } from '@fortawesome/free-solid-svg-icons';
 import YTServices from '../../Services/YoutubeApi';
 
 function Home() {
-  const allvideos = YTServices();
-  console.log(allvideos);
+    const allvideos = YTServices();
+    console.log(allvideos);
 
   return (
     <div className='Home-Container'>

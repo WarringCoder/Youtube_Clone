@@ -1,0 +1,44 @@
+.Left-Bar-Container
+{
+    position: absolute;
+    top: 0rem;
+    left: 4.5rem;
+    height: 100vh;
+    width: 20%;
+    z-index: 99999999;
+    background-color: rgb(242, 242, 242);
+}
+
+.linkcontainer
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 31%;
+    gap: 1rem;
+}
+
+.LeftBarLink
+{
+    width: 100%;
+    height: 3.7rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+    gap: 10rem;
+}
+
+.LeftBarLink p
+{
+    margin: 0;
+}
+
+.Leftbaricon
+{
+    font-size: 1.4rem;
+}
+
+.Leftbaricon:hover
+{
+    background-color: inherit;
+}

@@ -1,11 +1,21 @@
+// React
+import React from 'react';
+
+
 // CSS
 import './Music.css';
 
-import React from 'react'
+
+// pages
+import Home from '../Home/Home';
+
+
 
 function Music() {
   return (
-    <div>Music</div>
+    <div>
+      <Home></Home>
+    </div>
   )
 }
 
