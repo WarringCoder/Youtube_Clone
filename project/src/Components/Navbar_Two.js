@@ -21,7 +21,7 @@ function Navbar_Two()
     const { category, updateCategory } = useCategory();
   return (
     <>
-        <LeftOpenBar></LeftOpenBar>
+        <LeftOpenBar className='LeftOpenBar'></LeftOpenBar>
         <div className='NavbarTwo_Container'>
             <NavLink to='/' className={`Navlink ${category === 0 ? 'active' : ''}`} onClick={()=> updateCategory(0)}>
                 <FontAwesomeIcon className='navbar-two-icon' icon={faHouse} />

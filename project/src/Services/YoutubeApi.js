@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 import {useCategory} from '../Context/CategoryContext'
 
-const API_KEY = "AIzaSyCdqYYgsPUKschY8Gj2xl86_dny6ZAdw6w";
+const API_KEY = "AIzaSyAk7MFNOKgjwgYyNNrcnSIFs7SQaPjlQ5o";
 
 const YTServices = () => {
   const [allvideos, setAllvideos] = useState([]);
   const { category } = useCategory();
 
   useEffect(() => {
-   const fetchurl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=100&regionCode=TR&videoCategoryId=${category}&key=${API_KEY}`;
+   const fetchurl = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=25&regionCode=TR&videoCategoryId=${category}&key=${API_KEY}`;
 
 
     fetch(fetchurl)

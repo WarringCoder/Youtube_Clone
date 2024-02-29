@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 // CSS
 import './Navbar_One.css'
@@ -12,17 +13,24 @@ import youtube from '../img/youtube.png'
 import profil from '../img/profil.jpg'
 import bell from '../img/bell.png'
 
+// context
+import {useLeftBar} from '../Context/LeftBarContext'
+import {useCategory} from '../Context/CategoryContext'
 
 
 function Navbar_One() {
+  const {barSituation, updateBarSituation} = useLeftBar();
+  const { updateCategory } = useCategory(); 
   return (
     <div className='NavbarOne_Container'>
         <div className="left-part">
-            <FontAwesomeIcon className='navbar_bar' icon={faBars} />
-            <div className="youtube_icons">
-                <img className='youtube_img' src={youtube} alt="Youtube" />
-                <p className='yt_icon_text'>YouTube <span>TR</span></p>
-            </div>
+            <FontAwesomeIcon onClick={() => updateBarSituation(!barSituation)} className='navbar_bar' icon={faBars} />
+            <NavLink to='/' className='Youtube-icon-link activee'  onClick={()=> updateCategory(0)}>
+                <div className="youtube_icons">
+                    <img className='youtube_img' src={youtube} alt="Youtube" />
+                    <p className='yt_icon_text'>YouTube <span>TR</span></p>
+                </div>
+            </NavLink>
         </div>
         <div className="middle-part">
             <form action="#">

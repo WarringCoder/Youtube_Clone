@@ -2,11 +2,24 @@
 {
     position: absolute;
     top: 0rem;
-    left: 4.5rem;
+    left: -16.5rem;
     height: 100vh;
     width: 20%;
     z-index: 99999999;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1rem black;
+}
+
+.Left-Bar-Container-Visible
+{
+    left: 0;
+    transition: 0.61s;
+}
+
+.LeftbarYoutube
+{
+    margin-top: 2rem;
+    margin-left: -0.5rem;
 }
 
 .linkcontainer
@@ -14,31 +27,61 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-top: 31%;
+    margin-top: 15%;
     gap: 1rem;
+}
+
+.linkcontainer a
+{
+    text-decoration: none;
+    color: black;
 }
 
 .LeftBarLink
 {
     width: 100%;
     height: 3.7rem;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-    gap: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.LeftBarLink:hover
+{
+    background-color: rgba(128, 128, 128, 0.166);
+    border-radius: 0.5rem;
 }
 
 .LeftBarLink p
 {
     margin: 0;
+    margin-left: 1.1rem;
 }
 
 .Leftbaricon
 {
-    font-size: 1.4rem;
+    font-size: 1.4rem; 
+    margin-right: 1.1rem;
 }
 
 .Leftbaricon:hover
 {
     background-color: inherit;
+}
+
+.LeftBar-Footer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8.5rem;
+    margin-right: 0.5rem;
+}
+
+.LeftBar-Footer p
+{
+    font-size: 0.6rem;
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
 }

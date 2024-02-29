@@ -21,6 +21,7 @@ import Travel from './pages/Travel/Travel';
 
 // context
 import { CategoryProvider } from './Context/CategoryContext';
+import {LeftBarProvider} from './Context/LeftBarContext';
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
   return (
     <Router>
     <CategoryProvider>
+      <LeftBarProvider>
       <div>
         <div className="Navbar-full-container">
           <NavbarOne></NavbarOne>
@@ -43,6 +45,7 @@ function App() {
           <Route path='/travel' element={<Travel />} />
         </Routes>
       </div>
+    </LeftBarProvider>
     </CategoryProvider>
     </Router>
   );
